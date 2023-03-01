@@ -1,19 +1,27 @@
+const username = document.querySelector(".username");
+const password = document.querySelector(".password");
 const btn = document.querySelector(".btn");
 
-const defaultUsername = localStorage.setItem("username", "systematic");
-const defaultPassword = localStorage.setItem("password", "password");
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+});
 
 btn.addEventListener("click", function () {
-  const username = document.querySelector(".username").value;
-  const password = document.querySelector(".password").value;
-  if (
-    username == localStorage.getItem("username") &&
-    password == localStorage.getItem("password")
-  ) {
+  if (username.value === "systematic" && password.value === "password") {
     localStorage.setItem("status", "login");
-    alert("success");
-    window.location.href = "page2.html";
+    window.location.href = "home.html";
   } else {
-    console.log("wrong");
+    document.querySelector(".alert-danger").style.display = "block";
+    setTimeout(() => {
+      document.querySelector(".alert-danger").style.display = "none";
+    }, 3000);
+  }
+});
+
+document.getElementById("show-password").addEventListener("click", function () {
+  if (document.getElementById("show-password").checked === true) {
+    password.type = "text";
+  } else {
+    password.type = "password";
   }
 });

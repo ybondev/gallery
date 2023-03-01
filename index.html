@@ -16,126 +16,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- <div class="container mt-5">
-      <div class="col-md">
-        <div class="form-floating">
-          <select class="form-select choices" id="floatingSelectGrid">
-            <option value="1">PHEI</option>
-            <option value="2">SUC</option>
-            <option value="3">LUC</option>
-          </select>
-          <label for="floatingSelectGrid">Types of HEI</label>
-        </div>
-      </div>
-
-      <div class="form-floating mb-3 mt-3">
-        <input
-          type="text"
-          class="form-control"
-          id="no-guarantees"
-          name="no-guarantees"
-          value="0"
-        />
-        <label for="floatingInput">No-of-Guarantees</label>
-      </div>
-
-      <div class="form-floating mb-3">
-        <input
-          type="No-of-PWD-Guarantees"
-          class="form-control pwd-guarantees"
-          id="floatingInput"
-          value="0"
-        />
-        <label for="floatingInput">No-of-PWD-Guarantees</label>
-      </div>
-
-      <div class="row mt-3">
-        <div class="col-md-4">
-          <div class="form-floating mb-3">
-            <input
-              type="text"
-              class="form-control"
-              id="tes-amount"
-              name="tes-amount"
-              disabled
-            />
-            <label for="floatingInput">TES-Amount</label>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="form-floating mb-3">
-            <input
-              type="ASC"
-              class="form-control asc"
-              id="floatingInput"
-              disabled
-            />
-            <label for="floatingInput">ASC</label>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="form-floating mb-3">
-            <input
-              type="PWD-Amount"
-              class="form-control pwd-amount"
-              id="floatingInput"
-              disabled
-            />
-            <label for="floatingInput">PWD-Amount</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8">
-          <div class="form-floating mb-3">
-            <input
-              type="Total-Amount"
-              class="form-control total-amount"
-              id="floatingInput"
-              disabled
-            />
-            <label for="floatingInput">Total-Amount</label>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-primary" id="btn-submit" type="submit">
-              Compute
-            </button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-header">Please login to continue</div>
-            <div class="card-body">
-              <form action="page2.html">
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    placeholder="username"
-                    id="floatingInput"
-                    class="form-control username"
-                  />
-                  <label for="floatingInput">username</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="password"
-                    placeholder="password"
-                    id="floatingInput"
-                    class="form-control password"
-                  />
-                  <label for="floatingInput">password</label>
-                </div>
-                <button class="btn btn-primary mt-3 float-end">LOGIN</button>
-              </form>
-            </div>
+      <div class="login-container">
+        <div class="row row-index">
+          <div class="col-md-6">
+            <img
+              src="./assets/undraw_friendship_mni7.svg"
+              alt="..."
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6">
+            <form action="home.html" id="form">
+              <div class="alert alert-danger" role="alert">
+                Username or password is incorrect!
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  placeholder="username"
+                  id="floatingInput"
+                  class="form-control username"
+                />
+                <label for="floatingInput">Username</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  placeholder="password"
+                  id="floatingPassword"
+                  class="form-control password"
+                />
+                <label for="floatingInput">Password</label>
+                <input type="checkbox" id="show-password" class="mt-3" /> Show
+                Password
+              </div>
+              <button class="btn btn-primary my-3">LOGIN</button>
+              <div class="information">
+                <p>Don't have an access yet? <a href="#">Register here.</a></p>
+              </div>
+            </form>
           </div>
         </div>
       </div>
