@@ -10,7 +10,7 @@ fetch("./json/data.json")
       return x.date !== undefined;
     });
 
-    for (let datas of data) {
+    for (let datas = 0; datas < data.l) {
       out += `
       <div class="side-1" id="p1">
         <div class="content">
@@ -21,5 +21,17 @@ fetch("./json/data.json")
       `;
     }
 
+    let elem = document.getElementsByClassName("id");
+
+    for (let x = 0; x < data.length; x++) {
+      elem[x].innerHTML = x;
+    }
+
     // placeholder.innerHTML = out;
   });
+
+// let elem = document.getElementsByClassName("id");
+
+// for (let x = 0; x < elem.length; x++) {
+//   elem[x].innerHTML = "test";
+// }
