@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 *,
 *:before,
 *:after {
@@ -31,18 +32,27 @@ body {
   color: white;
 }
 
+.navbar-brand {
+  color: #f5f5f5;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+}
+
+.navbar-brand:hover {
+  color: #f5f5f5;
+}
+
 body * {
   transform-style: preserve-3d; /* am i doing this wrong? */
 }
 
 body {
-  background: radial-gradient(hsla(199, 40%, 90%, 0.7), hsla(0, 0%, 100%, 0))
-      no-repeat,
-    linear-gradient(60deg, purple, dodgerblue, violet);
+  background: #121212;
   color: #222;
-  font-family: "Gabriela", serif;
+  font-family: "Poppins", sans-serif;
   perspective: 70em; /*in your face*/
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 h1,
@@ -54,7 +64,8 @@ p {
   height: 80%;
   max-height: 500px;
   min-height: 300px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   background-image: linear-gradient(
       90deg,
       hsla(30, 40%, 50%, 0.6),
@@ -62,16 +73,21 @@ p {
       hsla(30, 40%, 50%, 0.4) 90%
     ),
     url("https://images.unsplash.com/photo-1615800098746-73af8261e3df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2135&q=80");
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
-  margin: auto;
+  right: 0; */
+  /* margin: auto; */
+  /* margin-top: 50px; */
 
   border: 3px solid hsla(30, 10%, 20%, 1);
   border-radius: 5px;
-  box-shadow: 0 0 150px hsla(170, 0%, 0%, 0.4);
+}
+
+h1,
+h2 {
+  font-size: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
 }
 
 .page {
@@ -118,8 +134,8 @@ p {
   background-color: #555;
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: -100px;
+  bottom: -100%;
+  right: 0px;
   margin: auto;
   color: white;
   text-shadow: 0 -1px 0 #222;
@@ -128,6 +144,7 @@ p {
   font-family: monospace;
   content: "next-page";
   animation: hide 0.8s linear;
+  z-index: 2;
 }
 .page.flipped:after {
   content: "prev-page";
@@ -165,5 +182,58 @@ p {
   }
   to {
     transform: rotateY(0deg);
+  }
+}
+
+.book-container {
+  /* display: flex;
+  flex-direction: column; */
+  /* height: 100dvh; */
+}
+
+.row {
+  padding: 10px 20px;
+  /* background-color: #f5f5f5; */
+  /* margin-top: 120px; */
+  /* height: auto;
+  max-height: 100%;
+  background: #f5f5f5; */
+}
+
+.svg {
+  height: 350px;
+}
+
+p {
+  font-size: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+  color: #f5f5f5;
+}
+
+@media screen and (max-width: 575px) {
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .first-container {
+    margin-top: 30px;
+  }
+  .first-container .col-md-4 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    margin-top: 100px;
+  }
+  .book {
+    max-height: 500px;
+    min-height: 500px;
+  }
+  .page {
+    max-height: unset;
   }
 }

@@ -9,7 +9,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
 btn.addEventListener("click", function () {
   if (username.value === "systematic" && password.value === "password") {
     localStorage.setItem("status", "login");
-    window.location.href = "home.html";
+    window.location.href = "gallery.html";
   } else {
     document.querySelector(".alert-danger").style.display = "block";
     setTimeout(() => {
