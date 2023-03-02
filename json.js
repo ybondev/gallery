@@ -3,7 +3,7 @@ fetch("./json/data.json")
     return response.json();
   })
   .then(function (data) {
-    let placeholder = document.querySelector(".test");
+    let placeholder = document.querySelector(".page");
     let out = "";
 
     var filtered = data.filter(function (x) {
@@ -12,9 +12,14 @@ fetch("./json/data.json")
 
     for (let datas of data) {
       out += `
-      <img src='${datas.img}' width='227px' class='img-fluid'>
+      <div class="side-1" id="p1">
+        <div class="content">
+          <h1>The Pilgrim&apos;s Path</h1>
+          <img src="${datas.img}" class="img-fluid" alt="" />
+        </div>
+      </div>
       `;
     }
 
-    placeholder.innerHTML = out;
+    // placeholder.innerHTML = out;
   });
